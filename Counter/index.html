@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Counter</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #main {
+      background-color: aliceblue;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #counterText {
+      font-size: x-large;
+    }
+    #value {
+      font-size: xx-large;
+    }
+    .group {
+      margin: 12px;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <span id="counterText">Counter</span>
+      <span id="value">0</span>
+      <div class="group">
+        <button id="decrease">decrease</button>
+        <button id="reset">reset</button>
+        <button id="increase">increase</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("increase").addEventListener("click", () => {
+      document.getElementById("value").innerHTML =
+        Number(document.getElementById("value").innerHTML) + 1;
+    });
+    document.getElementById("decrease").addEventListener("click", () => {
+      document.getElementById("value").innerHTML =
+        Number(document.getElementById("value").innerHTML) - 1;
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      document.getElementById("value").innerHTML = 0;
+    });
+  </script>
+</html>

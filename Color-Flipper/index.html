@@ -1,1 +1,31 @@
-Hello
+<html>
+  <head>
+    <title>Color Flipper</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #main {
+      background-color: red;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <button id="flip" style="height: 32px; width: 72px">Flip</button>
+    </div>
+  </body>
+  <script>
+    document.getElementById("flip").addEventListener("click", () => {
+      let hex =
+        "#" + (Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6);
+      document
+        .getElementById("main")
+        .setAttribute("style", `background-color: ${hex};`);
+    });
+  </script>
+</html>

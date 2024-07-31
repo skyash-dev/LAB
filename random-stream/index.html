@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>random-stream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #main {
+      height: 100%;
+      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .wrap {
+      width: 80%;
+      background: #accbee;
+      margin: 32px;
+      padding: 50px 25px 50px 25px;
+      border-radius: 10px;
+      border: 2px white solid;
+      cursor: pointer;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    .wrap:hover {
+      padding: 55px 30px 55px 30px;
+    }
+    img {
+      border-radius: 8px 8px 8px 8px;
+    }
+    button {
+      min-width: 56px;
+      min-height: 56px;
+      border: none;
+      cursor: pointer;
+      font-size: larger;
+    }
+    button:hover {
+      border: 4px #accbee solid;
+    }
+    #stream {
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      letter-spacing: 0.3px;
+      color: black;
+    }
+    #stream-link {
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <span><img src="./public/skyash.jpg" alt="skyash" width="72" /></span>
+      <a id="stream-link" class="wrap" href="https://streams.place/skyash">
+        <span id="stream"></span>
+      </a>
+      <button onclick="getData()">🪄</button>
+    </div>
+  </body>
+  <script>
+    getData();
+
+    async function getData() {
+      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+      fetch(proxyUrl + "https://streams.place/skyash/json/").then(
+        async (res) => {
+          const data = await res.json();
+          const length = data.length - 1;
+          let randIndex = Math.floor(Math.random() * length);
+          document.getElementById("stream").innerHTML = data[randIndex].text;
+        }
+      );
+    }
+  </script>
+</html>

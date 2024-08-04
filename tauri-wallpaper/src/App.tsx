@@ -3,16 +3,6 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
-import wallpaper from "tauri-plugin-wallpaper";
-
-wallpaper.attach();
-// or
-const windowLabel = "My Window Label";
-wallpaper.attach(windowLabel);
-
-// to detach
-// wallpaper.detach();
-
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");

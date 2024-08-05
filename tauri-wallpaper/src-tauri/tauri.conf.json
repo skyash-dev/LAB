@@ -20,8 +20,10 @@
     "windows": [
       {
         "title": "tauri-wallpaper",
-        "width": 800,
-        "height": 600
+        "closable": false,
+        "maximizable": false,
+        "minimizable": false,
+        "resizable": false
       }
     ],
     "security": {

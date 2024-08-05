@@ -31,6 +31,8 @@ fn main() {
       height: size.height,
     })).unwrap();
 
+    window.set_decorations(false);
+
     Wallpaper::attach(&window);
 
     window.show().unwrap();

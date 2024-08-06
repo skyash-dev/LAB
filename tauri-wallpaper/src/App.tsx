@@ -1,9 +1,18 @@
+import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 function App() {
+  document.addEventListener(
+    "contextmenu",
+    (e) => {
+      e.preventDefault();
+      return false;
+    },
+    { capture: true }
+  );
   return (
     <div className="container">
-      <iframe src="https://skyash.me" frameborder="0"></iframe>
+      <img src="./assets/kakashi.gif" alt="" />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+import kakashi from "./assets/kakashi.gif";
 
 function App() {
   document.addEventListener(
@@ -12,7 +13,7 @@ function App() {
   );
   return (
     <div className="container">
-      <img src="./assets/kakashi.gif" alt="" />
+      <img src={kakashi} alt="broken" />
     </div>
   );
 }

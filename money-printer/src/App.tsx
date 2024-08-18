@@ -5,7 +5,7 @@ function App() {
   console.log(solanaWeb3.Keypair.generate());
   return (
     <>
-      <div>Hello</div>
+      <div>Hello WEB3</div>
     </>
   );
 }

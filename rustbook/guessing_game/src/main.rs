@@ -29,3 +29,5 @@ fn main() {
         }
     }
 }
+
+// Pattern Matching in rust is amazing!

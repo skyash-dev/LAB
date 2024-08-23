@@ -17,9 +17,10 @@ fn main() {
     }
     println!("{_z}");
 
-    sum_two()
+    sum_two(2, 8)
 }
 
-fn sum_two() {
-    println!("HelloSUMTWO")
+fn sum_two(a: i32, b: i32) {
+    let c = a + b;
+    println!("{c}");
 }

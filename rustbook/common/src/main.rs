@@ -1,19 +1,25 @@
 const PI: f64 = 3.14;
 fn main() {
-    let mut x = 4;
-    x = 3; // assigned
+    let mut _x = 4;
+    _x = 3; // assigned
 
-    let y = 6;
-    let y = 4; // shadowing
-    println!("{PI} {x} {y}");
+    let _y = 6;
+    let _y = 4; // shadowing
+    println!("{PI} {_x} {_y}");
 
-    let z = 5;
-    let z = 4;
-    println!("{z}");
+    let _z = 5;
+    let _z = 4;
+    println!("{_z}");
     {
-        println!("{z}");
-        let z = 3;
-        println!("{z}");
+        println!("{_z}");
+        let _z = 3;
+        println!("{_z}");
     }
-    println!("{z}");
+    println!("{_z}");
+
+    sum_two()
+}
+
+fn sum_two() {
+    println!("HelloSUMTWO")
 }

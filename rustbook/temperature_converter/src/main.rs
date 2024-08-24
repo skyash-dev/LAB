@@ -32,9 +32,9 @@ fn main() {
 
     let mut converted: f32 = 0.0;
 
-    if (to_convert_str == "F") {
+    if (to_convert_str.to_lowercase() == "f") {
         converted = convert_to_fahrenheit(temperature_str);
-    } else if (to_convert_str == "C") {
+    } else if (to_convert_str.to_lowercase() == "c") {
         converted = convert_to_celsius(temperature_str);
     }
 

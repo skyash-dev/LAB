@@ -18,3 +18,8 @@ a salt is inserted randomly into a password before hashing to make it harder to 
 ## HMAC
 
 Hash-based message authentication code (or HMAC) is a cryptographic authentication technique that uses a hash function and a secret key. With HMAC, you can achieve authentication and verify that data is correct and authentic with shared secrets, as opposed to approaches that use signatures and asymmetric cryptography.
+
+What if we want to decrypt the message with the key? above techniques are hash based and a hash cannot be decrypted but only compared.
+
+What is encryption?
+Encryption defined. At its most basic level, encryption is the process of protecting information or data by using mathematical models to scramble it in such a way that only the parties who have the key to unscramble it can access it.

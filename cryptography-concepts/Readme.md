@@ -23,3 +23,15 @@ What if we want to decrypt the message with the key? above techniques are hash b
 
 What is encryption?
 Encryption defined. At its most basic level, encryption is the process of protecting information or data by using mathematical models to scramble it in such a way that only the parties who have the key to unscramble it can access it.
+
+## Keypairs
+
+Key pairs are generated with cryptographic algorithms based on mathematical problems termed one-way functions. Security of public-key cryptography depends on keeping the private key secret; the public key can be openly distributed without compromising security.
+
+## Asymmetric Encryption
+
+Asymmetric encryption is the process of using a public key from a public/private key pair to encrypt plaintext, and then using the corresponding private key to decrypt the ciphertext. Asymmetric encryption relies on asymmetric cryptography, also known as public key cryptography.
+
+Symmetric Encryption: Uses the same key for both encryption and decryption. It's fast but requires secure key sharing. Example: AES.
+
+Asymmetric Encryption: Uses a public key for encryption and a private key for decryption. It's more secure for key exchange but slower. Example: RSA.

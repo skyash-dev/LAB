@@ -12,7 +12,7 @@ function login(email, password) {
   const user = users.find((v) => v.email === email);
 
   const [salt, key] = user.password.split(":");
-  const hashedBuffer = Buffer.from(key, "hex");
+  const hashedBuffer = scryptSync(password, salt, 64); // Buffer objects are used to store bytes.
 
   const keyBuffer = Buffer.from(key, "hex");
   const match = timingSafeEqual(hashedBuffer, keyBuffer);

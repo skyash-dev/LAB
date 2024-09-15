@@ -35,3 +35,7 @@ Asymmetric encryption is the process of using a public key from a public/private
 Symmetric Encryption: Uses the same key for both encryption and decryption. It's fast but requires secure key sharing. Example: AES.
 
 Asymmetric Encryption: Uses a public key for encryption and a private key for decryption. It's more secure for key exchange but slower. Example: RSA.
+
+## Sign
+
+Signing of data works to authenticate the sender of the data and tends to implement a form of encryption in its process. The process of signing emails, sensitive data, and other information has become necessary, as it verifies the identity of the sender and ensures the data has not been altered in transit.

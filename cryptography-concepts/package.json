@@ -1,0 +1,12 @@
+{
+  "name": "cryptography-concepts",
+  "version": "1.0.0",
+  "description": "cryptography is a process of securing data using some algorithm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

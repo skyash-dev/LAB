@@ -14,3 +14,7 @@ same input -> random-salt + same-output
 Salting: Adds random data to a password before hashing, providing increased protection from attacks like rainbow table lookups.
 isn't salting just hashing the hash?
 a salt is inserted randomly into a password before hashing to make it harder to crack.
+
+## HMAC
+
+Hash-based message authentication code (or HMAC) is a cryptographic authentication technique that uses a hash function and a secret key. With HMAC, you can achieve authentication and verify that data is correct and authentic with shared secrets, as opposed to approaches that use signatures and asymmetric cryptography.

@@ -1,3 +1,5 @@
+// Salt
+
 const { scryptSync, randomBytes, timingSafeEqual } = require("crypto");
 
 function signup(email, password) {
